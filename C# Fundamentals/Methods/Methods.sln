@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SayHello", "01.SayHello\01.SayHello.csproj", "{EB7DC12F-06CC-411D-9DD4-F24891E6B9A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.SayHello", "01.SayHello\01.SayHello.csproj", "{EB7DC12F-06CC-411D-9DD4-F24891E6B9A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.GetLargestNumber", "02.GetLargestNumber\02.GetLargestNumber.csproj", "{A599E556-CDE9-4043-B063-506F51E83BA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.EnglishDigit", "03.EnglishDigit\03.EnglishDigit.csproj", "{E4CC233A-10DE-436C-B693-C8364745F4ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{EB7DC12F-06CC-411D-9DD4-F24891E6B9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB7DC12F-06CC-411D-9DD4-F24891E6B9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB7DC12F-06CC-411D-9DD4-F24891E6B9A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A599E556-CDE9-4043-B063-506F51E83BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A599E556-CDE9-4043-B063-506F51E83BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A599E556-CDE9-4043-B063-506F51E83BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A599E556-CDE9-4043-B063-506F51E83BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4CC233A-10DE-436C-B693-C8364745F4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4CC233A-10DE-436C-B693-C8364745F4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4CC233A-10DE-436C-B693-C8364745F4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4CC233A-10DE-436C-B693-C8364745F4ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

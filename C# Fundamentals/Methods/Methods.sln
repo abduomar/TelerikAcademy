@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.GetLargestNumber", "02.G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.EnglishDigit", "03.EnglishDigit\03.EnglishDigit.csproj", "{E4CC233A-10DE-436C-B693-C8364745F4ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.AppearanceCount", "04.AppearanceCount\04.AppearanceCount.csproj", "{162FFCF8-A298-4065-9072-ACCF8183CDCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E4CC233A-10DE-436C-B693-C8364745F4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4CC233A-10DE-436C-B693-C8364745F4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4CC233A-10DE-436C-B693-C8364745F4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162FFCF8-A298-4065-9072-ACCF8183CDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162FFCF8-A298-4065-9072-ACCF8183CDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162FFCF8-A298-4065-9072-ACCF8183CDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162FFCF8-A298-4065-9072-ACCF8183CDCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

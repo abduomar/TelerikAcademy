@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TribonacciTriangle", "Tribo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubsetOfSumS", "SubsetOfSumS\SubsetOfSumS.csproj", "{B5106D62-3686-43FF-B94A-8664EA551EB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bounce", "Bounce\Bounce.csproj", "{0BE45DB7-DE5F-4D90-AA36-2D986C369C41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B5106D62-3686-43FF-B94A-8664EA551EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5106D62-3686-43FF-B94A-8664EA551EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5106D62-3686-43FF-B94A-8664EA551EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE45DB7-DE5F-4D90-AA36-2D986C369C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE45DB7-DE5F-4D90-AA36-2D986C369C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE45DB7-DE5F-4D90-AA36-2D986C369C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE45DB7-DE5F-4D90-AA36-2D986C369C41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

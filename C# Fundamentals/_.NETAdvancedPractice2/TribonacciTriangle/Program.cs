@@ -7,9 +7,9 @@ namespace TribonacciTriangle
         static void Main(string[] args)
         {
 
-            int firstNumber = int.Parse(Console.ReadLine());
-            int secondNumber = int.Parse(Console.ReadLine());
-            int thirdNumber = int.Parse(Console.ReadLine());
+            long firstNumber = int.Parse(Console.ReadLine());
+            long secondNumber = int.Parse(Console.ReadLine());
+            long thirdNumber = int.Parse(Console.ReadLine());
             int lines = int.Parse(Console.ReadLine());
 
             Console.WriteLine(firstNumber);
@@ -20,7 +20,7 @@ namespace TribonacciTriangle
                 {
                     for (int j = 0; j < i; j++)
                     {
-                        int resultNumber = firstNumber + secondNumber + thirdNumber;
+                        long resultNumber = firstNumber + secondNumber + thirdNumber;
                         firstNumber = secondNumber;
                         secondNumber = thirdNumber;
                         thirdNumber = resultNumber;

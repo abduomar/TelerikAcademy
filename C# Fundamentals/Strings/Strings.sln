@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.SubstringInText", "03.Su
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.StringLength", "04.StringLength\04.StringLength.csproj", "{1B3A27F7-B1B6-4FC5-8CF4-5970D20EB5C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.SecretMessage", "05.SecretMessage\05.SecretMessage.csproj", "{1B1DB2A1-43FB-4ADC-8073-158248C8330D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1B3A27F7-B1B6-4FC5-8CF4-5970D20EB5C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B3A27F7-B1B6-4FC5-8CF4-5970D20EB5C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B3A27F7-B1B6-4FC5-8CF4-5970D20EB5C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1DB2A1-43FB-4ADC-8073-158248C8330D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1DB2A1-43FB-4ADC-8073-158248C8330D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1DB2A1-43FB-4ADC-8073-158248C8330D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1DB2A1-43FB-4ADC-8073-158248C8330D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

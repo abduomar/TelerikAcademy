@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ReverseString", "01.ReverseString\01.ReverseString.csproj", "{79095EDA-D1B4-4AC3-8223-C874AD45DA83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.ReverseString", "01.ReverseString\01.ReverseString.csproj", "{79095EDA-D1B4-4AC3-8223-C874AD45DA83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CorrectBrackets", "02.CorrectBrackets\02.CorrectBrackets.csproj", "{92211DF8-D0FC-4968-B82B-C1721A9F7A81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.CorrectBrackets", "02.CorrectBrackets\02.CorrectBrackets.csproj", "{92211DF8-D0FC-4968-B82B-C1721A9F7A81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SubstringInText", "03.SubstringInText\03.SubstringInText.csproj", "{9E3ED5BD-87AD-41FF-AC25-37B17B9337E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.SubstringInText", "03.SubstringInText\03.SubstringInText.csproj", "{9E3ED5BD-87AD-41FF-AC25-37B17B9337E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.StringLength", "04.StringLength\04.StringLength.csproj", "{1B3A27F7-B1B6-4FC5-8CF4-5970D20EB5C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{9E3ED5BD-87AD-41FF-AC25-37B17B9337E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E3ED5BD-87AD-41FF-AC25-37B17B9337E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E3ED5BD-87AD-41FF-AC25-37B17B9337E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B3A27F7-B1B6-4FC5-8CF4-5970D20EB5C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B3A27F7-B1B6-4FC5-8CF4-5970D20EB5C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B3A27F7-B1B6-4FC5-8CF4-5970D20EB5C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B3A27F7-B1B6-4FC5-8CF4-5970D20EB5C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

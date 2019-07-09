@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightPay.Website", "LightPay.Website\LightPay.Website.csproj", "{48A604C6-86FF-44EE-892B-2261356B2B33}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightPay.Data", "LightPay.Data\LightPay.Data.csproj", "{3B7C0C25-6C47-43E3-9508-40F7D376BDB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightPay.Models", "LightPay.Models\LightPay.Models.csproj", "{C0C9E037-5A69-43F9-99A5-B3E462BD1A97}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightPay.Services", "LightPay.Services\LightPay.Services.csproj", "{F7FC3D8E-F560-48DC-AF43-152AD435E2CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightPay.Website.Services.Test", "LightPay.Website.Services.Test\LightPay.Website.Services.Test.csproj", "{6C15AE55-7C16-4361-9400-E574D922E1A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48A604C6-86FF-44EE-892B-2261356B2B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48A604C6-86FF-44EE-892B-2261356B2B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48A604C6-86FF-44EE-892B-2261356B2B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48A604C6-86FF-44EE-892B-2261356B2B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B7C0C25-6C47-43E3-9508-40F7D376BDB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B7C0C25-6C47-43E3-9508-40F7D376BDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B7C0C25-6C47-43E3-9508-40F7D376BDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B7C0C25-6C47-43E3-9508-40F7D376BDB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C9E037-5A69-43F9-99A5-B3E462BD1A97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C9E037-5A69-43F9-99A5-B3E462BD1A97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C9E037-5A69-43F9-99A5-B3E462BD1A97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C9E037-5A69-43F9-99A5-B3E462BD1A97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7FC3D8E-F560-48DC-AF43-152AD435E2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FC3D8E-F560-48DC-AF43-152AD435E2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FC3D8E-F560-48DC-AF43-152AD435E2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FC3D8E-F560-48DC-AF43-152AD435E2CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C15AE55-7C16-4361-9400-E574D922E1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C15AE55-7C16-4361-9400-E574D922E1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C15AE55-7C16-4361-9400-E574D922E1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C15AE55-7C16-4361-9400-E574D922E1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00DC3323-C4E4-470C-9879-041646CEA442}
+	EndGlobalSection
+EndGlobal

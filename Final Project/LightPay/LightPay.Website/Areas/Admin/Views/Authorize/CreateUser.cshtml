@@ -1,0 +1,107 @@
+﻿@model CreateUserViewModel
+@using Microsoft.Extensions.Primitives;
+
+<!-- BEGIN: Content-->
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-header row mb-1">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title">User Management</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a asp-action="CreateClient">Create Client</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a asp-action="CreateAccount">Create Account</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                Create User
+                            </li>
+                            <li class="breadcrumb-item active">
+                                <a asp-action="AddUserAccount">Add Account To User</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row breadcrumbs-top">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-body">
+            <!-- Basic form layout section start -->
+            <section id="basic-form-layouts">
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title" id="basic-layout-colored-form-control">User Profile</h4>
+                        </div>
+                        <div class="card-content collapse show">
+                            <div class="card-body">
+                                <form id="register-user-form" class="form" asp-controller="Authorize" asp-action="RegisterUser" method="post">
+                                    <div class="form-body">
+                                        <h4 class="form-section"><i class="la la-eye"></i> About User</h4>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="userinput1">UserName</label>
+                                                    <input asp-for="@Model.Username" type="text" id="userinput1" class="form-control border-primary" placeholder="Username" name="username">
+                                                    <span asp-validation-for="@Model.Username" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="userinput2">Password</label>
+                                                    <input asp-for="@Model.Password" id="userinput2" class="form-control border-primary" placeholder="Password" name="password">
+                                                    <span asp-validation-for="@Model.Password" class="text-danger"></span>                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="userinput3">Name</label>
+                                                    <input asp-for="@Model.Name" type="text" id="userinput3" class="form-control border-primary" placeholder="Name" name="name">
+                                                    <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="accountsDropdown">Choose Account</label>
+                                                <select id="accountsDropdown" name="AccountId" class="form-control">
+                                                    <option value="0" selected="" disabled="">Account...</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions text-right">
+                                        <button type="reset" class="btn btn-warning mr-1">
+                                            <i class="ft-x"></i> Cancel
+                                        </button>
+                                        <button type="submit" class="btn btn-primary" id="type-user-success">
+                                            <i class="la la-check-square-o"></i> Create User
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+            <script src="~/js/createuser.js"></script>
+        }
+    </div>
+</div>

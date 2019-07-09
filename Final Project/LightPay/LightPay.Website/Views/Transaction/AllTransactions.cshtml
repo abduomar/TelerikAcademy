@@ -1,0 +1,265 @@
+﻿  <!-- BEGIN: Content-->
+@model PaginatedList<LightPay.Website.Models.ListTransactionViewModel>
+
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-header row mb-1">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h1 class="content-header-title">Payments</h1>
+            </div>
+        </div>
+        <div class="content-body">
+            <section id="payments-details">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title float-left">
+                                    Filter transactions by account
+                                </h4>
+                                <div class="float-right">
+                                    <a class="btn btn-sm btn-danger box-shadow-2 round btn-min-width pull-right white" data-target="#deposit" data-toggle="modal">
+                                        <i class="ft-plus white"></i>Choose Account
+                                    </a>
+                                    <div aria-hidden="true" class="modal fade text-left" id="deposit" role="dialog" tabindex="-1">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <label class="modal-title text-text-bold-600" id="myModalLabel33">
+                                                        Choose Account
+                                                    </label>
+                                                </div>
+                                                <form action="#">
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <select class="c-select form-control" id="source" name="dep-source">
+                                                                <option value="">
+                                                                    Select Account
+                                                                </option>
+                                                                <option value="Active">
+                                                                    Cash
+                                                                </option>
+                                                                <option value="Deactived">
+                                                                    Cheque
+                                                                </option>
+                                                                <option value="Delayed">
+                                                                    Online
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn btn-success mr-1" type="submit">
+                                                            Submit
+                                                        </button>
+                                                        <button class="btn btn-danger mr-1" type="reset">
+                                                            Cancel
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title float-left">
+                                    Pending Transactions
+                                </h4>
+                                <div class="float-right">
+                                    <a class="btn btn-sm btn-danger box-shadow-2 round btn-min-width pull-right white" asp-area="" asp-controller="Transaction" asp-action="CreateTransaction">
+                                        <i class="ft-plus white"></i>Add New Payment
+                                    </a>
+                                </div>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <a asp-action="AllTransactions" asp-route-sortOrder="@ViewData["A/cNumSortParm"]">A/c Number</a>
+                                        </th>
+                                        <th>
+                                            Client
+                                        </th>
+                                        <th>
+                                            Description
+                                        </th>
+                                        <th>
+                                            <a asp-action="AllTransactions" asp-route-sortOrder="@ViewData["AmmountSortParm"]">Amount</a>
+                                        </th>
+                                        <th>
+                                            Date
+                                        </th>
+                                        <th>
+                                            Type
+                                        </th>
+                                        <th>
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item in Model)
+                                    {
+                                        if (item.IsSaved == true)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.SenderAccountNumber)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PayerClient)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Description)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Ammount)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.CreatedOn)
+                                                </td>
+
+                                                <td>
+                                                    <span class="tran-type badge badge-danger badge-pill badge-sm">
+                                                        Outgoing
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <a href="bank-add-payment.html"><i class="la la-pencil-square success"></i></a>
+                                                    <a href="#"><i class="la la-trash danger"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        @{
+                            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+                            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+                        }
+
+                        <a asp-action="AllAccounts"
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-pageNumber="@(Model.PageIndex - 1)"
+                           class="btn btn-default @prevDisabled">
+                            Previous
+                        </a>
+                        <a asp-action="AllAccounts"
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-pageNumber="@(Model.PageIndex + 1)"
+                           class="btn btn-default @nextDisabled">
+                            Next
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title float-left">
+                                    Completed Transactions
+                                </h4>
+                                <div class="float-right">
+                                    <a class="btn btn-sm btn-danger box-shadow-2 round btn-min-width pull-right white" asp-area="" asp-controller="Transaction" asp-action="CreateTransaction">
+                                        <i class="ft-plus white"></i>Add New Payment
+                                    </a>
+                                </div>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <a asp-action="AllTransactions" asp-route-sortOrder="@ViewData["A/cNumSortParm"]">From Account</a>
+                                        </th>
+                                        <th>
+                                            To Account
+                                        </th>
+                                        <th>
+                                            Description
+                                        </th>
+                                        <th>
+                                            <a asp-action="AllTransactions" asp-route-sortOrder="@ViewData["AmmountSortParm"]">Amount</a>
+                                        </th>
+                                        <th>
+                                            Date
+                                        </th>
+                                        <th>
+                                            Type
+                                        </th>
+                                        <th>
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        @if (item.IsSaved == false)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.SenderAccountNumber)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.RecieverAccountNumber)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Description)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Ammount)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.CreatedOn)
+                                                </td>
+
+                                                <td>
+                                                    <span class="tran-type badge badge-danger badge-pill badge-sm">
+                                                        Outgoing
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <a href="bank-add-payment.html"><i class="la la-pencil-square success"></i></a>
+                                                    <a href="#"><i class="la la-trash danger"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        @{
+                            var prevDisabled2 = !Model.HasPreviousPage ? "disabled" : "";
+                            var nextDisabled2 = !Model.HasNextPage ? "disabled" : "";
+                        }
+
+                        <a asp-action="AllAccounts"
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-pageNumber="@(Model.PageIndex - 1)"
+                           class="btn btn-default @prevDisabled">
+                            Previous
+                        </a>
+                        <a asp-action="AllAccounts"
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-pageNumber="@(Model.PageIndex + 1)"
+                           class="btn btn-default @nextDisabled">
+                            Next
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- END: Content-->

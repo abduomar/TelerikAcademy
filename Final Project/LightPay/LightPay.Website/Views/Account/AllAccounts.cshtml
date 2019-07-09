@@ -1,0 +1,130 @@
+﻿@model PaginatedList<LightPay.Website.Models.ListAccountViewModel>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListCars</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title float-left">
+                My Accounts
+            </h4>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a asp-action="AllAccounts" asp-route-sortOrder="@ViewData["A/cNumSortParm"]">A/c Number</a>
+                    </th>
+                    <th>
+                        A/c Nickname
+                    </th>
+                    <th>
+                        Transactions
+                    </th>
+                    <th>
+                        <a asp-action="AllAccounts" asp-route-sortOrder="@ViewData["BalanceSortParm"]">Balance</a>
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AccountNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nickname)
+                        </td>
+                        <td>
+                            <div class="row">
+                                <form asp-area="" asp-controller="Account" asp-action="AccountTransactions" method="get">
+                                    <input type="hidden" name="accountNickname" value="@item.Nickname" />
+                                    <button asp-area="" asp-controller="Account" asp-action="AccountTransactions" type="submit" class="ac-status badge badge-success badge-pill badge-sm">    View Transactions</button>
+                                </form>
+
+
+                            </div>
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Balance)
+                        </td>
+                        <td>
+                                <div class="row">
+                                    <form asp-area="" asp-controller="Account" asp-action="RenameAccount" method="get">
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <input type="hidden" name="accountNumber" value="@item.AccountNumber" />
+                                        <input type="hidden" name="nickname" value="@item.Nickname" />
+                                        <input type="hidden" name="balance" value="@item.Balance" />
+                                        <input type="hidden" name="clientName" value="@item.ClientName" />
+                                        <button asp-area="" asp-controller="Account" asp-action="RenameAccount" type="submit" class="la la-pencil-square success"></button>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <form asp-area="" asp-controller="Account" asp-action="CreateAccountTransaction" method="get">
+                                        <input type="hidden" name="accountNickname" value="@item.Nickname" />
+                                        <button asp-area="" asp-controller="Account" asp-action="CreateAccountTransaction" type="submit" class="la la-money" style="margin-left:150%"></button>
+                                    </form>
+                                </div>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </div>
+        @{
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+        }
+
+        <a asp-action="AllAccounts"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex - 1)"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-action="AllAccounts"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex + 1)"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
+    
+    <div class="card-content collapse show">
+        <div class="card-body">
+
+            <div class="demo-section k-content wide">
+                <div id="chart"></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/lib/kendo-ui/js/jquery.min.js"></script>
+    <script src="~/lib/kendo-ui/js/kendo.all.min.js"></script>
+    <script src="~/js/pieaccounts.js"></script>
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/lib/kendo-ui/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="~/lib/kendo-ui/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="~/lib/kendo-ui/styles/kendo.default.mobile.min.css" />
+}

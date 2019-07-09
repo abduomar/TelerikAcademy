@@ -1,0 +1,143 @@
+﻿@model MakePaymentViewModel
+<!-- BEGIN: Content-->
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-header row mb-1">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title">Add Transaction</h3>
+
+            </div>
+        </div>
+        <div class="content-body">
+            <!-- Form wizard with number tabs section start -->
+            <section id="add-payment">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    Add New Transaction
+                                </h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+
+                                    <form asp-controller="Transaction" asp-action="CreateTransaction" id="create-transaction-form" class="form" method="post">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4">
+                                                <div class="form-group">
+                                                    <label @*for="accountsDropdown" *@>
+                                                        From Account
+                                                        <span class="danger">
+                                                            *
+                                                        </span>
+                                                    </label>
+                                                    <select asp-for="@Model.SenderAccountName" id="accountsDropdown" name="AccountId" class="form-control">
+                                                        <option value="0" selected="" disabled="">Accounts...</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-4 col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="amount">
+                                                        Payer Client
+                                                        <span class="danger">
+                                                            *
+                                                        </span>
+                                                    </label>
+                                                    <input asp-for="@Model.PayerClientName" class="form-control" id="clientz" name="ClientName" placeholder="Payer Client Name" readonly>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="amount">
+                                                        Amount
+                                                        <span class="danger">
+                                                            *
+                                                        </span>
+                                                    </label>
+                                                    <input asp-for="@Model.Ammount" class="form-control" id="amount"  placeholder="Enter Amount" type="number" required>
+                                                    <span asp-validation-for="@Model.Ammount" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-6">
+
+                                                <div class="form-group">
+                                                    <label for="tags">
+                                                        To Account
+                                                        <span class="danger">
+                                                            *
+                                                        </span>
+                                                    </label>
+                                                    <input asp-for="@Model.RecieverAccountName" class="form-control" id="tags"  placeholder="Enter Account Name" type="text" required>
+                                                    <span asp-validation-for="@Model.RecieverAccountName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="client">
+                                                        Payee Client Name
+                                                        <span class="danger">
+                                                            *
+                                                        </span>
+                                                    </label>
+                                                    <input asp-for="@Model.PayeeClientName" class="form-control" id="client" name="ClientName" placeholder="Payee Client Name" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="projectinput8">
+                                                        Description
+                                                        <span class="danger">
+                                                            *
+                                                        </span>
+                                                    </label>
+                                                    <textarea asp-for="@Model.Description" aspid="projectinput8" rows="8" class="form-control"  placeholder="Write A Description"></textarea>
+                                                    <span asp-validation-for="@Model.Description" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer text-right">
+                                            <button name="submitbutton2" type="submit" class="btn btn-primary">
+                                                <i class="la la-check-square-o"></i> Save
+                                            </button>
+                                            <button  name="submitbutton1" type="submit" class="btn btn-success mr-1">
+                                                Submit
+                                            </button>
+                                            <button type="reset" class="btn btn-danger">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <script src="~/js/createtransaction.js"></script>
+            <script src="~/js/createuser.js"></script>
+        }
+
+        @section Styles {
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        }
+
+    </div>
+</div>
+
+<!-- END: Content-->
